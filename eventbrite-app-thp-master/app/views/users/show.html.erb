@@ -48,9 +48,11 @@
               <div class="row justify-content-between">
                   <% @user_events.each do |event| %>
                   <div class="card col-12 mb-3">
-                    <div class="card-body">
-                      <h5 class="card-title"><%= event.title %></h5>
-                      <%= link_to "En savoir +",  href='#', class:"btn btn-sm btn-outline-secondary" %>
+                  <div class="card-body">
+                    <h5 class="card-title"><%= event.title %></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><%= event.location %></h6>
+                    <p class="card-text"><%= event.price %> €</p>
+                    <%= link_to "En savoir +",  href='#', class:"btn btn-sm btn-outline-secondary" %>
                     </div>
                   </div>
                   <% end %>
